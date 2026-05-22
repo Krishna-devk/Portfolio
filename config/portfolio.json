@@ -55,8 +55,8 @@
         "Flask",
         "IoT Gateways"
       ],
-      "github": "#",
-      "live": "#",
+      "github": "https://github.com/Krishna-devk/agri",
+      "live": "https://agri-jade.vercel.app/",
       "accent": "from-[#00F5FF]/20 to-[#4F46E5]/10 border-[#00F5FF]/30 hover:shadow-[0_0_25px_rgba(0,245,255,0.15)]",
       "highlightType": "agrisense"
     },
@@ -98,19 +98,17 @@
     },
     {
       "id": "threed",
-      "title": "3D Portfolio",
-      "tag": "Immersive 3D Experience",
+      "title": "Portfolio",
+      "tag": "Immersive Experience",
       "description": "A gorgeous immersive portfolio crafted to showcase WebGL and shader capabilities. Employs advanced particle physics, customized shader equations, fluid camera trajectories, and smooth frame-locked updates.",
       "tech": [
-        "React",
-        "Three.js",
-        "GSAP",
+        "Next.js",
         "WebGL Shaders",
         "Vite",
         "Tailwind CSS"
       ],
-      "github": "#",
-      "live": "#",
+      "github": "https://github.com/Krishna-devk/Portfolio",
+      "live": "https://portfolio-edxa.vercel.app/",
       "accent": "from-[#00F5FF]/20 to-[#A855F7]/10 border-[#00F5FF]/30 hover:shadow-[0_0_25px_rgba(0,245,255,0.15)]",
       "highlightType": "threed"
     }
