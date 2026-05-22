@@ -1,0 +1,263 @@
+export interface PersonalInfo {
+  name: string;
+  titles: string[];
+  heroText: string;
+  aboutTitle: string;
+  aboutBio: string;
+  resumeUrl: string;
+  profileImage: string;
+  email: string;
+  location: string;
+  socials: {
+    github: string;
+    linkedin: string;
+  };
+}
+
+export interface StatItem {
+  value: number;
+  suffix: string;
+  label: string;
+}
+
+export interface ProjectItem {
+  id: string;
+  title: string;
+  tag: string;
+  description: string;
+  tech: string[];
+  github: string;
+  live: string;
+  accent: string;
+  highlightType: string;
+}
+
+export interface SkillItem {
+  name: string;
+  category: "core" | "frontend" | "backend" | "database" | "tools";
+  level: number;
+  accent: string;
+}
+
+export interface ExperienceItem {
+  type: "work" | "education";
+  title: string;
+  subtitle: string;
+  duration: string;
+  points: string[];
+  metrics?: { label: string; value: string }[];
+  skills?: string[];
+}
+
+export interface AchievementItem {
+  title: string;
+  subtitle: string;
+  rank: string;
+  details: string[];
+  gradient: string;
+  link?: string;
+}
+
+export interface ThemeConfig {
+  background: string;
+  surface: string;
+  surfaceHover: string;
+  primary: string;
+  secondary: string;
+  accent: string;
+  fontFamily: string;
+  animationIntensity: number;
+  glowIntensity: number;
+  spacing: string;
+}
+
+export interface PortfolioData {
+  personal: PersonalInfo;
+  stats: StatItem[];
+  projects: ProjectItem[];
+  skills: SkillItem[];
+  experiences: ExperienceItem[];
+  achievements: AchievementItem[];
+  theme: ThemeConfig;
+}
+
+export const defaultPortfolioData: PortfolioData = {
+  personal: {
+    name: "Krishna Agarwal",
+    titles: [
+      "AI Engineer",
+      "MERN Developer",
+      "Full Stack Developer",
+      "Digital Architect"
+    ],
+    heroText: "Engineering scalable server pipelines, high-performance database schema architectures, and rich interactive WebGL user interfaces.",
+    aboutTitle: "Pioneering the Intersection of AI & Immersive Web Apps",
+    aboutBio: "Hi, I'm Krishna Agarwal. I am an AI Engineer and Full Stack Developer passionately focused on engineering intelligent architectures, building state-of-the-art interactive user interfaces, and writing highly optimized server-side logic.\n\nCurrently, I operate as a MERN Stack Developer at the Centre for Future Studies and Research, where I develop cutting-edge full-stack web applications and scalable web systems.\n\nPursuing my B.Tech in Computer Science and Engineering at AKGEC with a remarkable CGPA of 9.38, I am deeply committed to pushing boundaries in artificial intelligence, Agentic AI architectures, multi-step LLM reasoning pipelines, and real-time multiplayer applications.",
+    resumeUrl: "/Krishna_Resume.pdf",
+    profileImage: "",
+    email: "krishnaagdevk@gmail.com",
+    location: "Meerut, Uttar Pradesh, India",
+    socials: {
+      github: "https://github.com/Krishna-devk",
+      linkedin: "https://www.linkedin.com/in/krishna-agarwal-580ab425b/"
+    }
+  },
+  stats: [
+    { value: 3, suffix: "+", label: "Production Apps" },
+    { value: 15, suffix: "+", label: "APIs Engineered" },
+    { value: 50, suffix: "%", label: "Query Optimization" },
+    { value: 2, suffix: "nd", label: "Runner-Up Hackathon" }
+  ],
+  projects: [
+    {
+      id: "agrisense",
+      title: "AgriSense AI",
+      tag: "Deep Tech & IoT Precision",
+      description: "State-of-the-art AI + IoT platform built for high-performance precision farming, tracking microclimatic soil indicators, diagnosing crop health via computer vision, and forecasting yield models.",
+      tech: ["React", "Node.js", "TensorFlow.js", "Python", "Flask", "IoT Gateways"],
+      github: "#",
+      live: "#",
+      accent: "from-[#00F5FF]/20 to-[#4F46E5]/10 border-[#00F5FF]/30 hover:shadow-[0_0_25px_rgba(0,245,255,0.15)]",
+      highlightType: "agrisense"
+    },
+    {
+      id: "quickcare",
+      title: "QuickCare AI",
+      tag: "AI Healthcare Consultation",
+      description: "Futuristic clinical coordination portal featuring instant patient onboarding, integrated speech-to-text consultation transcripts, and automated, multi-agent medical report generators utilizing LLM intelligence.",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "OpenAI API", "WebSockets", "MongoDB"],
+      github: "#",
+      live: "#",
+      accent: "from-[#A855F7]/20 to-[#4F46E5]/10 border-[#A855F7]/30 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)]",
+      highlightType: "quickcare"
+    },
+    {
+      id: "boardly",
+      title: "Boardly Canvas",
+      tag: "Real-time Multiplayer SaaS",
+      description: "Ultra-fast, highly collaborative brainstorming spatial canvas. Supports multiplayer cursor tracking, real-time node connections, geometric layouts, and persistent state syncing via Redis clustering.",
+      tech: ["React", "Express", "Socket.io", "Redis", "MongoDB", "Tailwind CSS"],
+      github: "#",
+      live: "#",
+      accent: "from-[#4F46E5]/20 to-[#A855F7]/10 border-[#4F46E5]/30 hover:shadow-[0_0_25px_rgba(79,70,229,0.15)]",
+      highlightType: "boardly"
+    },
+    {
+      id: "threed",
+      title: "3D Portfolio",
+      tag: "Immersive 3D Experience",
+      description: "A gorgeous immersive portfolio crafted to showcase WebGL and shader capabilities. Employs advanced particle physics, customized shader equations, fluid camera trajectories, and smooth frame-locked updates.",
+      tech: ["React", "Three.js", "GSAP", "WebGL Shaders", "Vite", "Tailwind CSS"],
+      github: "#",
+      live: "#",
+      accent: "from-[#00F5FF]/20 to-[#A855F7]/10 border-[#00F5FF]/30 hover:shadow-[0_0_25px_rgba(0,245,255,0.15)]",
+      highlightType: "threed"
+    }
+  ],
+  skills: [
+    { name: "TypeScript", category: "core", level: 90, accent: "from-[#00F5FF]/20 to-[#4F46E5]/5 border-[#00F5FF]/20 text-[#00F5FF]" },
+    { name: "JavaScript", category: "core", level: 95, accent: "from-amber-500/20 to-yellow-500/5 border-amber-500/20 text-amber-400" },
+    { name: "C++", category: "core", level: 85, accent: "from-blue-500/20 to-cyan-500/5 border-blue-500/20 text-blue-400" },
+    { name: "Python", category: "core", level: 80, accent: "from-indigo-500/20 to-emerald-500/5 border-indigo-500/20 text-indigo-400" },
+    { name: "React", category: "frontend", level: 92, accent: "from-[#00F5FF]/20 to-[#4F46E5]/5 border-[#00F5FF]/20 text-[#00F5FF]" },
+    { name: "Next.js", category: "frontend", level: 88, accent: "from-slate-400/20 to-slate-800/5 border-slate-400/20 text-white" },
+    { name: "Redux", category: "frontend", level: 85, accent: "from-[#A855F7]/20 to-[#4F46E5]/5 border-[#A855F7]/20 text-[#A855F7]" },
+    { name: "Tailwind CSS", category: "frontend", level: 95, accent: "from-[#00F5FF]/20 to-teal-500/5 border-[#00F5FF]/20 text-[#00F5FF]" },
+    { name: "AI Agent", category: "backend", level: 75, accent: "from-[#00F5FF]/20 to-pink-500/5 border-[#00F5FF]/20 text-[#00F5FF]" },
+    { name: "Node.js", category: "backend", level: 90, accent: "from-emerald-500/20 to-green-500/5 border-emerald-500/20 text-emerald-400" },
+    { name: "Express", category: "backend", level: 92, accent: "from-slate-400/20 to-slate-800/5 border-slate-400/20 text-slate-300" },
+    { name: "REST APIs", category: "backend", level: 95, accent: "from-[#00F5FF]/20 to-indigo-500/5 border-[#00F5FF]/20 text-[#00F5FF]" },
+    { name: "Socket.io", category: "backend", level: 88, accent: "from-[#A855F7]/20 to-pink-500/5 border-[#A855F7]/20 text-[#A855F7]" },
+    { name: "MongoDB", category: "database", level: 88, accent: "from-emerald-500/20 to-green-500/5 border-emerald-500/20 text-emerald-400" },
+    { name: "Redis Cache", category: "database", level: 82, accent: "from-red-500/20 to-orange-500/5 border-red-500/20 text-red-400" },
+    { name: "PostgreSQL", category: "database", level: 80, accent: "from-blue-500/20 to-indigo-500/5 border-blue-500/20 text-blue-400" },
+    { name: "SQL", category: "database", level: 84, accent: "from-[#00F5FF]/20 to-[#4F46E5]/5 border-[#00F5FF]/20 text-[#00F5FF]" },
+    { name: "Git & GitHub", category: "tools", level: 90, accent: "from-slate-400/20 to-slate-800/5 border-slate-400/20 text-white" },
+    { name: "Docker", category: "tools", level: 78, accent: "from-blue-500/20 to-indigo-500/5 border-blue-500/20 text-blue-400" },
+    { name: "Postman", category: "tools", level: 88, accent: "from-orange-500/20 to-red-500/5 border-orange-500/20 text-orange-400" },
+    { name: "Vercel / Netlify", category: "tools", level: 85, accent: "from-[#A855F7]/20 to-[#4F46E5]/5 border-[#A855F7]/20 text-[#A855F7]" }
+  ],
+  experiences: [
+    {
+      type: "work",
+      title: "MERN Stack Developer",
+      subtitle: "Centre for Future Studies and Research",
+      duration: "Oct 2024 - Present",
+      points: [
+        "Architecting complex, responsive and cloud-scalable production-grade web systems and web portals using React, Node.js, Express, and MongoDB.",
+        "Engineered 15+ highly responsive, secure and fully optimized REST APIs to power high-traffic applications.",
+        "Achieved a 40% increase in development velocity and feature execution by designing highly modular, reusable, and type-safe front-end component suites.",
+        "Optimized MongoDB data schemas and lookup operations, yielding a remarkable 50% increase in queries speed and response times via custom indexing."
+      ],
+      metrics: [
+        { label: "Query Speedup", value: "50% Increase" },
+        { label: "APIs Built", value: "15+ Secured" }
+      ],
+      skills: ["MongoDB", "Express", "React", "Node.js", "REST APIs", "Query Optimization"]
+    },
+    {
+      type: "education",
+      title: "B.Tech in Computer Science & Engineering",
+      subtitle: "Ajay Kumar Garg Engineering College (AKGEC)",
+      duration: "2023 - 2027",
+      points: [
+        "Secured a highly distinguished cumulative CGPA of 9.38, ranking among the top of the engineering class.",
+        "Completed comprehensive academic tracks in Advanced Software Engineering, Data Structures & Algorithms, Database Management Systems, and Artificial Intelligence.",
+        "Developed full-stack systems and worked on scientific research workflows focusing on machine learning and database systems."
+      ],
+      metrics: [
+        { label: "Academic CGPA", value: "9.38 / 10.0" },
+        { label: "Core Focus", value: "CSE & Software Eng." }
+      ],
+      skills: ["Data Structures", "Algorithms", "Advanced DBMS", "AI/ML Foundations", "OOPs"]
+    }
+  ],
+  achievements: [
+    {
+      title: "KIET Hackathon 2026",
+      subtitle: "KIET Group of Institutions",
+      rank: "2ND RUNNER-UP",
+      details: [
+        "Clinched 2nd Runner-Up position in a highly competitive hackathon from a pool of 100+ national level engineering teams.",
+        "Architected a fully optimized, real-time MERN stack application featuring web socket channels and intelligent caching.",
+        "Commended for designing an outstanding responsive user interface and modular codebase structure."
+      ],
+      gradient: "from-amber-500/10 to-yellow-600/5 border-amber-500/20 hover:shadow-[0_0_25px_rgba(245,158,11,0.15)]"
+    },
+    {
+      title: "IMS Hackathon 2026",
+      subtitle: "IMS Engineering College",
+      rank: "1ST PLACE WINNER",
+      details: [
+        "Championed first place in a high-intensity hackathon among 50+ elite regional engineering teams.",
+        "Engineered an intelligent collaborative framework utilizing high-performance server pipelines and real-time syncing.",
+        "Commended for designing an outstanding responsive user interface and bulletproof database schema architectures."
+      ],
+      gradient: "from-[#00F5FF]/10 to-[#4F46E5]/5 border-[#00F5FF]/20 hover:shadow-[0_0_25px_rgba(0,245,255,0.15)]",
+      link: ""
+    },
+    {
+      title: "CodeCrunch Hackathon",
+      subtitle: "Regional Tech Summit",
+      rank: "TOP 5 POSITION",
+      details: [
+        "Spearheaded software development within a top 5 ranking team in an intensive 36-hour continuous build challenge.",
+        "Designed and shipped a complex scalable collaborative database panel sync utilizing REST API structures.",
+        "Awarded core honors for superior performance benchmarks under high stress and stringent constraints."
+      ],
+      gradient: "from-[#A855F7]/10 to-[#4F46E5]/5 border-[#A855F7]/20 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)]"
+    }
+  ],
+  theme: {
+    background: "#050816",
+    surface: "#0B1220",
+    surfaceHover: "#111827",
+    primary: "#00F5FF",
+    secondary: "#4F46E5",
+    accent: "#A855F7",
+    fontFamily: "Space Grotesk",
+    animationIntensity: 1,
+    glowIntensity: 1,
+    spacing: "normal"
+  }
+};
